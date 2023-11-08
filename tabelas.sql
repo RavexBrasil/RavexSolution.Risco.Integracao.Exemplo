@@ -1,6 +1,4 @@
-DROP TABLE Posicoes;
-
-CREATE TABLE Posicoes (
+CREATE TABLE IF NOT EXISTS Posicoes (
     Id INTEGER PRIMARY KEY AUTOINCREMENT,
     IdPosicaoRisco INTEGER NOT NULL,
     IdRastreador INTEGER NOT NULL,
@@ -15,19 +13,16 @@ CREATE TABLE Posicoes (
     Ignicao INTEGER
 );
 
-CREATE INDEX Posicoes_IdPosicaoRisco ON Posicoes (IdPosicaoRisco);
+CREATE INDEX IF NOT EXISTS Posicoes_IdPosicaoRisco ON Posicoes (IdPosicaoRisco);
 
-DROP TABLE Mensagens;
-
-CREATE TABLE Mensagens (
-    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-    IdMensagemRecebidaRisco INTEGER NOT NULL,
-    IdEquipamento INTEGER NOT NULL,
-    IdVeiculo INTEGER NOT NULL,
-    DataCriacaoNoEquipamento DATETIME NOT NULL,
-    Placa TEXT,
-    TipoMacro INTEGER NOT NULL,
-    Texto TEXT
+CREATE TABLE IF NOT EXISTS  Mensagens (
+  Id INTEGER PRIMARY KEY AUTOINCREMENT,
+  IdMensagemRecebidaRisco INTEGER NOT NULL,
+  IdEquipamento INTEGER NOT NULL,
+  IdVeiculo INTEGER NOT NULL,
+  DataCriacaoNoEquipamento DATETIME NOT NULL,
+  Placa TEXT,
+  TipoMacro INTEGER NOT NULL,
+  Texto TEXT
 );
-
-CREATE INDEX Mensagens_IdMensagemRecebidaRisco ON Mensagens (IdMensagemRecebidaRisco);
+CREATE INDEX IF NOT EXISTS Mensagens_IdMensagemRecebidaRisco ON Mensagens (IdMensagemRecebidaRisco);

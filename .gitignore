@@ -169,3 +169,6 @@ Desktop.ini
 .DS_Store
 .idea
 logs
+
+db.sqlite
+db.sqlite-journal
