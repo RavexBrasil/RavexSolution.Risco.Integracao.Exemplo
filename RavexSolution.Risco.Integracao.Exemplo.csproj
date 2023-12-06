@@ -13,7 +13,10 @@
         <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
         <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.24" />
         <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.5" />
-        <PackageReference Include="RavexSolution.Risco.Integracao.Client" Version="5.52.0" />
-        <PackageReference Include="RavexSolution.Risco.Integracao.Contracts" Version="5.52.0" />
+        <PackageReference Include="RavexSolution.Risco.Integracao.Client" Version="5.55.0" />
+        <PackageReference Include="RavexSolution.Risco.Integracao.Contracts" Version="5.55.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Properties\launchSettings.json" />
     </ItemGroup>
 </Project>
